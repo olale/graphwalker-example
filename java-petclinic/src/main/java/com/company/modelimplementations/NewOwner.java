@@ -19,7 +19,7 @@ public class NewOwner extends ExecutionContext implements NewOwnerSharedState {
 
     @Override
     public void v_OwnerInformation() {
-        Assert.assertTrue(Helper.WaitForElement(By.tagName("h2")).getText().matches("Owner Information"));
+        Assert.assertTrue(Helper.WaitForElement(By.xpath("//h2")).getText().matches("Owner Information"));
     }
 
     @Override
@@ -64,7 +64,7 @@ public class NewOwner extends ExecutionContext implements NewOwnerSharedState {
 
     @Override
     public void v_IncorrectData() {
-        Assert.assertTrue(Helper.WaitForElement(By.tagName("h2")).getText().matches("New Owner"));
+        Assert.assertTrue(Helper.WaitForElement(By.xpath("//h2")).getText().matches("New Owner"));
 
         String str = Helper.WaitForElement(By.cssSelector("div.control-group.error > div.controls > span.help-inline")).getText();
         Assert.assertTrue("Text not found!", str.contains("numeric value out of bounds (<10 digits>.<0 digits> expected"));
@@ -72,6 +72,6 @@ public class NewOwner extends ExecutionContext implements NewOwnerSharedState {
 
     @Override
     public void v_NewOwner() {
-        Assert.assertTrue(Helper.WaitForElement(By.tagName("h2")).getText().matches("New Owner"));
+        Assert.assertTrue(Helper.WaitForElement(By.xpath("//h2")).getText().matches("New Owner"));
     }
 }

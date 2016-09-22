@@ -18,7 +18,7 @@ public class FindOwners extends ExecutionContext implements FindOwnersSharedStat
 
     @Override
     public void v_Owners() {
-        Assert.assertTrue(Helper.WaitForElement(By.tagName("h2")).getText().matches("Owners"));
+        Assert.assertTrue(Helper.WaitForElement(By.xpath("//h2")).getText().matches("Owners"));
     }
 
     @Override
@@ -28,7 +28,7 @@ public class FindOwners extends ExecutionContext implements FindOwnersSharedStat
 
     @Override
     public void v_FindOwners() {
-        Assert.assertTrue(Helper.WaitForElement(By.tagName("h2")).getText().matches("Find Owners"));
+        Assert.assertTrue(Helper.WaitForElement(By.xpath("//h2")).getText().matches("Find Owners"));
     }
 
     @Override
@@ -38,11 +38,11 @@ public class FindOwners extends ExecutionContext implements FindOwnersSharedStat
 
     @Override
     public void e_FindOwners() {
-        Helper.WaitForElement(By.className("icon-search")).click();
+        Helper.WaitForElement(By.xpath("//i[@class='icon-search']")).click();
     }
 
     @Override
     public void v_NewOwner() {
-        Assert.assertTrue(Helper.WaitForElement(By.tagName("h2")).getText().matches("New Owner"));
+        Assert.assertTrue(Helper.WaitForElement(By.xpath("//h2")).getText().matches("New Owner"));
     }
 }

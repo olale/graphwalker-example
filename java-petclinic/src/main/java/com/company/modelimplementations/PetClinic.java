@@ -3,6 +3,7 @@ package com.company.modelimplementations;
 
 import com.company.PetClinicSharedState;
 import com.company.helper.Helper;
+
 import org.graphwalker.core.machine.ExecutionContext;
 import org.graphwalker.java.annotation.AfterExecution;
 import org.graphwalker.java.annotation.BeforeExecution;
@@ -21,32 +22,32 @@ public class PetClinic extends ExecutionContext implements PetClinicSharedState 
 
     @Override
     public void v_FindOwners() {
-        Assert.assertTrue(Helper.WaitForElement(By.tagName("h2")).getText().matches("Find Owners"));
+        Assert.assertTrue(Helper.WaitForElement(By.xpath("//h2")).getText().matches("Find Owners"));
     }
 
     @Override
     public void e_HomePage() {
-        Helper.WaitForElement(By.className("icon-home")).click();
+        Helper.WaitForElement(By.xpath("//i[@class='icon-home']")).click();
     }
 
     @Override
     public void e_Veterinarians() {
-        Helper.WaitForElement(By.className("icon-th-list")).click();
+        Helper.WaitForElement(By.xpath("//i[@class='icon-th-list']")).click();
     }
 
     @Override
     public void v_Veterinarians() {
-        Assert.assertTrue(Helper.WaitForElement(By.tagName("h2")).getText().matches("Veterinarians"));
+    	Assert.assertTrue(Helper.WaitForElement(By.xpath("//h2")).getText().matches("Veterinarians"));
     }
 
     @Override
     public void e_FindOwners() {
-        Helper.WaitForElement(By.className("icon-search")).click();
+        Helper.WaitForElement(By.xpath("//i[@class='icon-search']")).click();
     }
 
     @Override
     public void v_HomePage() {
-        Assert.assertTrue(Helper.WaitForElement(By.tagName("h2")).getText().matches("Welcome"));
+        Assert.assertTrue(Helper.WaitForElement(By.xpath("//h2")).getText().matches("Welcome"));
     }
 
     @Override
